@@ -16,6 +16,12 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    // define what sources this site is allowed to interact with
+    // using localhost at port 4500 which is where the api is being served locally
+    contentSecurityPolicy: {
+      'connect-src' : "'self' http://localhost:4500"
     }
   };
 
